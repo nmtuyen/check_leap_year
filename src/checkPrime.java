@@ -15,7 +15,6 @@ public class checkPrime {
                     check = false;
                     break;
                 }
-
             }
             if (check){
                 System.out.println(a + " is Prime");
