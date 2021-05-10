@@ -34,16 +34,13 @@ public class Menu {
                 case 5:
                     size = inputSize();
                     inputArr(size, arr);
-                    int sum = sumEven(size, arr);
-                    if (sum == -1){
-                        System.out.println("Mảng đã nhập không có số chẵn");
-                    }else
-                        System.out.println("Tổng các số chẵn trong mảng vừa nhập là "+ sum);
-
+                    sumEven(size, arr);
+                    break;
                 case 6:
                     size = inputSize();
                     inputArr(size, arr);
                     add(size, arr);
+                    break;
                 case 7:
                 case 8:
                     size = inputSize();
@@ -119,14 +116,19 @@ public class Menu {
         }
         if (!check) System.out.println("\n" + "không có số chẵn trong mảng");
     }
-    static int sumEven(int N, int[] arr){
+    static void sumEven(int N, int[] arr){
         int sum = 0;
+        boolean check = false;
         for (int i = 0; i < N; i++){
             if (arr[i] % 2 == 0){
                 sum += arr[i];
+                check = true;
             }
         }
-        return sum;
+        if (!check){
+            System.out.println("Không có số chẵn nào trong mảng");
+        }else
+            System.out.println("Tổng các số chẵn trong mảng là: "+ sum);
     }
     static void add(int N, int [] arr){
         Scanner sc = new Scanner(System.in);
