@@ -17,5 +17,8 @@ public class Car {
     public String getEngnie(){
         return engnie;
     }
+    public String toString(){
+        return "Xe " + getName() +" có đông cơ " + getEngnie();
+    }
 }
 
